@@ -64,15 +64,4 @@ public class Department {
     public int hashCode() {
         return Objects.hash(nameofdepartment, descrptofdepartment, numberofemployees, id);
     }
-    public void save() {
-        try(Connection con = models.DB.sql2o.open()) {
-            String sql = "INSERT INTO departments (nameofdepartment, descrptofdepartment, numberofemployees) VALUES (:nameofdepartment, :descrptofdepartment, :numberofemployees)";
-            this.id = (int) con.createQuery(sql, true)
-                    .addParameter("nameofdepartment", this.nameofdepartment)
-                    .addParameter("descrptofdepartment", this.descrptofdepartment)
-                    .addParameter("numberofemployees", this.numberofemployees)
-                    .executeUpdate()
-                    .getKey();
-        }
-    }
 }
