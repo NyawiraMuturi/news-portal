@@ -10,24 +10,17 @@ numberofemployees int
 
 CREATE TABLE news(
 id SERIAL PRIMARY KEY,
-news_type VARCHAR,
-department_id INT,
-user_id INT,
-title VARCHAR,
-description VARCHAR
+NewsTitle VARCHAR,
+content VARCHAR
 );
 
-CREATE TABLE staff(
+CREATE TABLE users (
 id SERIAL PRIMARY KEY,
 name VARCHAR,
 position VARCHAR,
-staff_role VARCHAR
+role VARCHAR,
+iddept INT
 );
 
-CREATE TABLE users_departments(
-id SERIAL PRIMARY KEY,
-user_id INT,
-department_id INT
-);
 
 CREATE DATABASE news_portal_test WITH TEMPLATE news_portal;
