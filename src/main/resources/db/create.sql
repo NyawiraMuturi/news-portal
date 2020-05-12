@@ -3,9 +3,9 @@ CREATE DATABASE news_portal;
 
 CREATE TABLE departments(
 id SERIAL PRIMARY KEY,
-name VARCHAR,
-description VARCHAR,
-size int
+nameofdepartment VARCHAR,
+descrptofdepartment VARCHAR,
+numberofemployees int
 );
 
 CREATE TABLE news(
