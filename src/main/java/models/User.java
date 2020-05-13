@@ -72,5 +72,15 @@ public class User {
     }
 
     public void save() {
+        try(Connection con = models.DB.sql2o.open()) {
+            String sql = "INSERT INTO users (name, position, role,iddept) VALUES (:name, :position, :role, :iddept)";
+            this.id = (int) con.createQuery(sql, true)
+                    .addParameter("name", this.name)
+                    .addParameter("position", this.position)
+                    .addParameter("role", this.role)
+                    .addParameter("iddept", this.iddept)
+                    .executeUpdate()
+                    .getKey();
+        }
     }
 }

@@ -1,4 +1,4 @@
-package model;
+package models;
 
 import org.sql2o.Sql2o;
 

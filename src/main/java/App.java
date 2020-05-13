@@ -70,6 +70,7 @@ public class App {
             String numberofemployees = req.queryParams("numberofemployees");
             Department newDepartment = new Department(name, description, numberofemployees);
             model.put("newDepartment", newDepartment);
+            newDepartment.save();
             res.redirect("/success");
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
@@ -98,6 +99,7 @@ public class App {
 
             User newUser = new User(name, position, role,iddept);
             model.put("newUser", newUser);
+            newUser.save();
             res.redirect("/success");
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
@@ -121,6 +123,7 @@ public class App {
             int iddept = Integer.parseInt(req.queryParams("iddept"));
             News newDepartment = new News(newstitle, content, iddept);
             model.put("newDepartment", newDepartment);
+            newDepartment.save();
             res.redirect("/success");
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());

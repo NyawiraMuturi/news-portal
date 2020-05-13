@@ -60,5 +60,14 @@ public class News {
     }
 
     public void save() {
+        try(Connection con = models.DB.sql2o.open()) {
+            String sql = "INSERT INTO departments (newstitle, content, iddept) VALUES (:nameofdepartment, :descrptofdepartment, :numberofemployees)";
+            this.id = (int) con.createQuery(sql, true)
+                    .addParameter("nameofdepartment", this.newstitle)
+                    .addParameter("descrptofdepartment", this.content)
+                    .addParameter("numberofemployees", this.iddept)
+                    .executeUpdate()
+                    .getKey();
+        }
     }
 }
