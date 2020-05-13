@@ -10,7 +10,7 @@ numberofemployees int
 
 CREATE TABLE news(
 id SERIAL PRIMARY KEY,
-NewsTitle VARCHAR,
+newstitle VARCHAR,
 content VARCHAR
 );
 

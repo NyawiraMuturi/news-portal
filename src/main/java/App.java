@@ -16,11 +16,17 @@ import java.util.Map;
 //import exceptions.ApiException;
 import static spark.Spark.*;
 
-
-
 public class App {
+    static int getHerokuAssignedPort() {
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        if (processBuilder.environment().get("PORT") != null) {
+            return Integer.parseInt(processBuilder.environment().get("PORT"));
+        }
+        return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
+    }
 
     public static void main(String[] args) {
+        port(getHerokuAssignedPort());
         staticFileLocation("/public");
         Sql2oNewsDao newsDao;
         Sql2oDepartmentDao departmentDao;
@@ -33,7 +39,7 @@ public class App {
         }, new HandlebarsTemplateEngine());
 
         Connection conn;
-        String connectionString = "jdbc:postgresql://localhost:5432/organisationnewsdb";
+        String connectionString = "jdbc:postgresql://localhost:5432/news_portal";
         Sql2o sql2o = new Sql2o(connectionString, "its_hanti", "NyawiraAce20");
 
         userDao = new Sql2oUserDao(sql2o);
