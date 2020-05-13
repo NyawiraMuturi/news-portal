@@ -70,4 +70,7 @@ public class User {
     public int hashCode() {
         return Objects.hash(name,position,role, iddept,id);
     }
+
+    public void save() {
+    }
 }

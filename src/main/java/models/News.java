@@ -59,4 +59,6 @@ public class News {
         return Objects.hash(content, id, iddept);
     }
 
+    public void save() {
+    }
 }
