@@ -1,0 +1,16 @@
+{{#partial "content"}}
+    {{#if users}}
+        {{#each users}}
+            <p>Name:{{name}}</p>
+            <p>position:{{position}}</p>
+            <p> Role:{{role}}</p>
+
+
+
+        {{/each}}
+    {{/if}}
+{{else}}
+    Please add User.
+{{/partial}}
+
+{{> layout.hbs}}
