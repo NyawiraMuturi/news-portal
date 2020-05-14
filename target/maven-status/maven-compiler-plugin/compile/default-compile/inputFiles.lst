@@ -1,0 +1,11 @@
+/home/its_hanti/IdeaProjects/news-portal/src/main/java/models/User.java
+/home/its_hanti/IdeaProjects/news-portal/src/main/java/dao/Sql2oDepartmentDao.java
+/home/its_hanti/IdeaProjects/news-portal/src/main/java/models/News.java
+/home/its_hanti/IdeaProjects/news-portal/src/main/java/dao/Sql2oUserDao.java
+/home/its_hanti/IdeaProjects/news-portal/src/main/java/models/DB.java
+/home/its_hanti/IdeaProjects/news-portal/src/main/java/dao/DepartmentDao.java
+/home/its_hanti/IdeaProjects/news-portal/src/main/java/models/Department.java
+/home/its_hanti/IdeaProjects/news-portal/src/main/java/App.java
+/home/its_hanti/IdeaProjects/news-portal/src/main/java/dao/NewsDao.java
+/home/its_hanti/IdeaProjects/news-portal/src/main/java/dao/UserDao.java
+/home/its_hanti/IdeaProjects/news-portal/src/main/java/dao/Sql2oNewsDao.java

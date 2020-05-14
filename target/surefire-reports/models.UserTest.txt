@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: models.UserTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.069 sec <<< FAILURE! - in models.UserTest
+getRoleReturnsRoleCorrectly_String(models.UserTest)  Time elapsed: 0.009 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<Book [k]eeping> but was:<Book [K]eeping>
+	at models.UserTest.getRoleReturnsRoleCorrectly_String(UserTest.java:35)
+

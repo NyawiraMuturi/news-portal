@@ -1,0 +1,16 @@
+{{#partial "content"}}
+    {{#if departments}}
+        {{#each departments}}
+            <p>Name:{{descrptofdepartment}}</p>
+            <p>Description:{{nameofdepartment}}</p>
+            <p> Number Of employees:{{numberofemployees}}</p>
+
+
+
+        {{/each}}
+    {{/if}}
+{{else}}
+    There seems to be no departments. Please Add.
+{{/partial}}
+
+{{> layout.hbs}}

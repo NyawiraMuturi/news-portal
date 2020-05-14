@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Lobster+Two&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+    header {
+     background-color: #999966;
+     align-content: stretch;
+    }
+    #nav-bar {
+     background-color: #D6D5D3;
+     width: 100%;
+     padding: 20px;
+     position: relative;
+     text-align: right;
+     list-style: none;
+     font-family: Arial, Helvetica, sans-serif;
+    }
+    .nav-link {
+     color: #060400;
+     padding: 30px;
+    }
+    </style>
+
+</head>
+<body>
+
+<header id="header">
+    <nav id="nav-bar">
+        <a class="nav-item nav-link" href="/">Home</a>
+        <a class="nav-item nav-link" href="/departments/new">Add department</a>
+        <a class="nav-item nav-link" href="/users/new">Add user</a></li>
+        <a class="nav-item nav-link" href="/News/new">Add news</a></li>
+    </nav>
+</header>
+
+<div class="container">
+
+    <div class="col-md-12">
+        {{#block "content"}}
+            <h1>WELCOME TO ANNOUNCE!!<br> the most reliable news portal.</h1>
+        {{/block}}
+
+    </div>
+</div>
+
+{{#block "footer"}}
+
+    </body>
+    </html>
+{{/block}}
